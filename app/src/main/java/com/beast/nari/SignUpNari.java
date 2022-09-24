@@ -1,6 +1,7 @@
 package com.beast.nari;
 
 import static com.beast.nari.Common.ConvertToString;
+import static com.beast.nari.Common.getBaseUrl;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -35,7 +36,7 @@ public class SignUpNari extends AppCompatActivity {
     SharedPreferences sp;
     SharedPreferences.Editor editor;
 
-    String url = "https://biochemical-damping.000webhostapp.com/nari/signupdemo.php";
+    String url = getBaseUrl() + "signupdemo.php";
 
     String signStatus;
 
@@ -58,7 +59,6 @@ public class SignUpNari extends AppCompatActivity {
 //            startActivity(new Intent(getApplicationContext(), NariDashboard.class));
 //            finish();
 //        }
-
 
         binding.profilePic.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -87,6 +87,8 @@ public class SignUpNari extends AppCompatActivity {
             }
         });
     }
+
+
 
     private void getAllData() {
 
