@@ -62,7 +62,7 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatHolderClass> {
             @Override
             public void onClick(View view) {
                 if (list.get(position).getPERSON().equalsIgnoreCase("boat")){
-                   setChatText(list.get(position).getText());
+                   setChatText(list.get(position).getText(), activity);
                 }
             }
         });

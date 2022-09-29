@@ -1,4 +1,27 @@
 <resources>
     <string name="app_name">NARI</string>
     <string name="title_activity_maps">MapsActivity</string>
+
+
+
+    <string name="rape">Rape Guidance</string>
+
+
+    <string name="black_mail">Black Mailing Guidance</string>
+
+
+    <string name="periods">Periods Guidance</string>
+
+
+    <string name="gender_divide">Guidance on inequality</string>
+
+
+    <string name="fp1">Family Pressure Type 1 Guidance</string>
+
+
+    <string name="fp2">Family Pressure Type 2 Guidance</string>
+
+
+    <string name="fp3">Family Pressure Type 3 Guidance</string>
+
 </resources>
