@@ -1,5 +1,6 @@
 package com.beast.nari;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
@@ -10,8 +11,12 @@ import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.beast.nari.databinding.ActivityNariDashboardBinding;
 
@@ -106,5 +111,27 @@ public class NariDashboard extends AppCompatActivity {
                 startActivity(new Intent(NariDashboard.this,pdfview.class));
             }
         });
+    }
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.nari_dashboard_menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+
+
+        switch (item.getItemId()){
+
+            case  R.id.communicateWithBoat:
+                startActivity(new Intent(this, ChatWithBoat.class));
+
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 }
