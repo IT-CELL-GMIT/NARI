@@ -17,8 +17,8 @@ import java.util.List;
 
 public class ChatWithBoat extends AppCompatActivity {
 
-    LinearLayoutManager linearLayoutManager;
-    RecyclerView recyclerView;
+    static LinearLayoutManager linearLayoutManager;
+    static RecyclerView recyclerView;
     static List<ChatModel> list;
     static ChatModel model;
     static ChatAdapter adapter;
@@ -35,20 +35,24 @@ public class ChatWithBoat extends AppCompatActivity {
         adapter = new ChatAdapter(list, this, ChatWithBoat.this);
         recyclerView.setAdapter(adapter);
 
-        model = new ChatModel("bhosdkkkkkkkkkkkkkkkkkkkkkkkkdddddddddddddddddjjjjjjjjjjjjjjjjjjjjjjjjjddddddddddddddddddddd", "boat");
-        list.add(model);
+        model = new ChatModel("Rape", "boat");
+        list.add(list.size(), model);
         adapter.notifyDataSetChanged();
 
-        model = new ChatModel("madarchodaddddddddddddddddddddddddkkkkkkkkkkkkkkkkkkaaaaaaaaaaaakkkkkkkkkkkkk", "boat");
-        list.add(model);
+        model = new ChatModel("Black Mailing", "boat");
+        list.add(list.size(), model);
         adapter.notifyDataSetChanged();
 
-        model = new ChatModel("madarchodaddddddddddddddddddddddddkkkkkkkkkkkkkkkkkkaaaaaaaaaaaakkkkkkkkkkkkk", "boat");
-        list.add(model);
+        model = new ChatModel("Family Force", "boat");
+        list.add(list.size(), model);
         adapter.notifyDataSetChanged();
 
-        model = new ChatModel("madarchodaddddddddddddddddddddddddkkkkkkkkkkkkkkkkkkaaaaaaaaaaaakkkkkkkkkkkkk", "boat");
-        list.add(model);
+        model = new ChatModel("Periods", "boat");
+        list.add(list.size(), model);
+        adapter.notifyDataSetChanged();
+
+        model = new ChatModel("Gender Divide", "boat");
+        list.add(list.size(), model);
         adapter.notifyDataSetChanged();
 
     }
@@ -56,8 +60,9 @@ public class ChatWithBoat extends AppCompatActivity {
     public static void setChatText(String selectedMsg){
 
         model = new ChatModel(selectedMsg, "nari");
-        list.add(model);
+        list.add(list.size(), model);
         adapter.notifyDataSetChanged();
+        recyclerView.smoothScrollToPosition(adapter.getItemCount() - 1);
 
     }
 
