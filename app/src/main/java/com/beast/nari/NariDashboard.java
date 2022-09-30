@@ -70,6 +70,13 @@ public class NariDashboard extends AppCompatActivity {
         };
         sensorManager.registerListener(sensorEventListener, sensorShake, SensorManager.SENSOR_DELAY_NORMAL);
 
+        binding.communitySupport.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(NariDashboard.this, CommunitySupport.class));
+            }
+        });
+
         binding.location.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

@@ -19,17 +19,22 @@
         android:theme="@style/Theme.NARI"
         tools:targetApi="31">
         <activity
-            android:name=".ChatWithBoat"
+            android:name=".CommunitySupport"
             android:exported="false" />
         <activity
+            android:name=".ChatWithBoat"
+            android:exported="false"
+            android:label="Chatting with boat"
+            android:parentActivityName=".NariDashboard" />
+        <activity
             android:name=".sensorshake"
-            android:exported="false"></activity>
+            android:exported="false" />
         <activity
             android:name=".AddNariActivity"
-            android:exported="false"></activity>
+            android:exported="false" />
         <activity
             android:name=".pdfview"
-            android:exported="false"></activity>
+            android:exported="false" />
         <activity
             android:name=".callpicked"
             android:exported="false" />
@@ -41,7 +46,7 @@
             android:exported="false" />
         <activity
             android:name=".guardianDashboard"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".guardianSignup"
             android:exported="false" />
@@ -50,7 +55,7 @@
             android:exported="false" />
         <activity
             android:name=".NariDashboard"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".SignUpNari"
             android:exported="false" />
@@ -90,7 +95,7 @@
         <activity
             android:name=".MapsActivity"
             android:exported="true"
-            android:label="@string/title_activity_maps"></activity>
+            android:label="@string/title_activity_maps" />
     </application>
 
 </manifest>
