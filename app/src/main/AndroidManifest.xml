@@ -22,6 +22,11 @@
 
         </activity>
         <activity
+            android:name=".ChatWithBoat"
+            android:exported="false"
+            android:label="Chatting with boat"
+            android:parentActivityName=".NariDashboard" />
+        <activity
             android:name=".sensorshake"
             android:exported="false">
 
