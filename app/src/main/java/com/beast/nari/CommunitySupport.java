@@ -1,14 +1,18 @@
 package com.beast.nari;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.view.MenuItem;
+import android.widget.Toast;
 
 import com.beast.nari.adapter.CommunityAdapter;
 import com.beast.nari.adapter.UserAdapter;
 import com.beast.nari.model.CommunityModel;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,13 +24,34 @@ public class CommunitySupport extends AppCompatActivity {
     CommunityAdapter adapter;
     RecyclerView recyclerView;
     List<CommunityModel> list;
+    BottomNavigationView bottomNavigationView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_community_support);
-
+        bottomNavigationView = findViewById(R.id.navigation);
         recyclerView = findViewById(R.id.communitySupportRecyclerView);
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+                switch (item.getItemId()) {
+
+                    case R.id.publik:
+                        Toast.makeText(CommunitySupport.this, "public", Toast.LENGTH_SHORT).show();
+                        break;
+                    case R.id.privata:
+                        Toast.makeText(CommunitySupport.this, "private", Toast.LENGTH_SHORT).show();
+                        break;
+                    default:
+                        break;
+
+
+                }
+                return false;
+            }
+        });
 
         linearLayoutManager = new LinearLayoutManager(CommunitySupport.this);
         recyclerView.setLayoutManager(linearLayoutManager);

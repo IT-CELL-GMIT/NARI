@@ -263,7 +263,7 @@ public class SignUpNari extends AppCompatActivity {
 
     }
 
-    private void takeIMG() {
+    private void    takeIMG() {
 
         Intent intent = new Intent();
         intent.setType("image/*");

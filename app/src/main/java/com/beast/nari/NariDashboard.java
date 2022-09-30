@@ -1,6 +1,5 @@
 package com.beast.nari;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
@@ -11,17 +10,13 @@ import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.net.Uri;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 import com.beast.nari.databinding.ActivityNariDashboardBinding;
 
 public class NariDashboard extends AppCompatActivity {
-    ImageView msk,helpline,pdfself;
+    ImageView msk,helpline,pdfself,communitysupport;
     ImageView fakecall;
 
     private ActivityNariDashboardBinding binding;
@@ -34,6 +29,7 @@ public class NariDashboard extends AppCompatActivity {
         fakecall = findViewById(R.id.fakecall);
         helpline = findViewById(R.id.helpLine);
         pdfself = findViewById(R.id.self);
+        communitysupport= findViewById(R.id.b);
         SensorManager sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
         Sensor sensorShake = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
         SensorEventListener sensorEventListener = new SensorEventListener() {
@@ -69,13 +65,6 @@ public class NariDashboard extends AppCompatActivity {
             }
         };
         sensorManager.registerListener(sensorEventListener, sensorShake, SensorManager.SENSOR_DELAY_NORMAL);
-
-        binding.communitySupport.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(NariDashboard.this, CommunitySupport.class));
-            }
-        });
 
         binding.location.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -118,27 +107,12 @@ public class NariDashboard extends AppCompatActivity {
                 startActivity(new Intent(NariDashboard.this,pdfview.class));
             }
         });
-    }
+        communitysupport.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(NariDashboard.this,CommunitySupport.class));
+            }
+        });
 
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.nari_dashboard_menu, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-
-
-        switch (item.getItemId()){
-
-            case  R.id.communicateWithBoat:
-                startActivity(new Intent(this, ChatWithBoat.class));
-
-        }
-
-        return super.onOptionsItemSelected(item);
     }
 }
