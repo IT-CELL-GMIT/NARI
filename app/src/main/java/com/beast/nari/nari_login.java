@@ -57,7 +57,7 @@ public class nari_login extends AppCompatActivity {
         binding.narisignup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(nari_login.this,MainActivity.class));
+                startActivity(new Intent(nari_login.this,SignUpNari.class));
             }
         });
     }
