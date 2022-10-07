@@ -68,13 +68,13 @@ public class ChatWithBoat extends AppCompatActivity {
         if(selectedMsg.equalsIgnoreCase("Rape")){
 
             setLeftMsg(selectedMsg);
-            setRightMsg(activity.getResources().getString(R.string.rape));
+//            setRightMsg(activity.getResources().getString(R.string.rape));
 
         }else if(selectedMsg.equalsIgnoreCase("Black Mailing")){
 
             setLeftMsg(selectedMsg);
 
-            setRightMsg(activity.getResources().getString(R.string.black_mail));
+//            setRightMsg(activity.getResources().getString(R.string.black_mail));
 
         }else if(selectedMsg.equalsIgnoreCase("Family Force")){
 
@@ -88,31 +88,31 @@ public class ChatWithBoat extends AppCompatActivity {
 
             setLeftMsg(selectedMsg);
 
-            setRightMsg(activity.getResources().getString(R.string.periods));
+//            setRightMsg(activity.getResources().getString(R.string.periods));
 
         }else if(selectedMsg.equalsIgnoreCase("Gender Divide")){
 
             setLeftMsg(selectedMsg);
 
-            setRightMsg(activity.getResources().getString(R.string.gender_divide));
+//            setRightMsg(activity.getResources().getString(R.string.gender_divide));
 
         }else if(selectedMsg.equalsIgnoreCase("Family Pressure Type 1")){
 
             setLeftMsg(selectedMsg);
 
-            setRightMsg(activity.getResources().getString(R.string.fp1));
+//            setRightMsg(activity.getResources().getString(R.string.fp1));
 
         }else if(selectedMsg.equalsIgnoreCase("Family Pressure Type 2")){
 
             setLeftMsg(selectedMsg);
 
-            setRightMsg(activity.getResources().getString(R.string.fp2));
+//            setRightMsg(activity.getResources().getString(R.string.fp2));
 
         }else if(selectedMsg.equalsIgnoreCase("Family Pressure Type 3")){
 
            setLeftMsg(selectedMsg);
 
-            setRightMsg(activity.getResources().getString(R.string.fp3));
+//            setRightMsg(activity.getResources().getString(R.string.fp3));
 
         }
 

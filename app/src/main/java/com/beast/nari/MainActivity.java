@@ -20,23 +20,22 @@ import nl.psdcompany.duonavigationdrawer.widgets.DuoDrawerToggle;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private DuoDrawerLayout drawerLayout;
-
-
+    Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
 
         init();
 
     }
 
-    private void init() {
-
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+    public void init() {
 
         drawerLayout = (DuoDrawerLayout) findViewById(R.id.drawer);
         DuoDrawerToggle drawerToggle = new DuoDrawerToggle(this, drawerLayout, toolbar,
@@ -78,9 +77,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         ll_ptcalendar.setOnClickListener(this);
         ll_Logout.setOnClickListener(this);
 
-
         replace(new HomeFragment());
-
 
     }
 

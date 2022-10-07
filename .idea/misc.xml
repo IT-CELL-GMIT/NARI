@@ -3,15 +3,61 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/NARICLONE/app/src/main/res/layout/activity_guardian_dashboard.xml" value="0.24270833333333333" />
+        <entry key="..\:/NARICLONE/app/src/main/res/layout/activity_guardian_login.xml" value="0.25677083333333334" />
+        <entry key="..\:/NARICLONE/app/src/main/res/layout/activity_guardian_signup.xml" value="0.24270833333333333" />
+        <entry key="..\:/NARICLONE/app/src/main/res/layout/activity_main.xml" value="0.25677083333333334" />
+        <entry key="..\:/NARICLONE/app/src/main/res/layout/activity_main_page.xml" value="0.25677083333333334" />
+        <entry key="..\:/NARICLONE/app/src/main/res/layout/activity_maps.xml" value="0.2528205128205128" />
+        <entry key="..\:/NARICLONE/app/src/main/res/layout/activity_nari_dashboard.xml" value="0.25677083333333334" />
+        <entry key="..\:/NARICLONE/app/src/main/res/layout/activity_nari_login.xml" value="0.24270833333333333" />
+        <entry key="..\:/NARICLONE/app/src/main/res/layout/activity_sign_up_nari.xml" value="0.25677083333333334" />
+        <entry key="..\:/Users/om/AndroidStudioProjects/NARI/app/src/main/res/layout/activity_callpicked.xml" value="0.20677083333333332" />
         <entry key="..\:/Users/om/AndroidStudioProjects/NARI/app/src/main/res/layout/activity_guardian_dashboard.xml" value="0.20677083333333332" />
-        <entry key="..\:/Users/om/AndroidStudioProjects/NARI/app/src/main/res/layout/activity_nari_dashboard.xml" value="0.20677083333333332" />
-        <entry key="..\:/nariclone/app/src/main/res/layout/activity_callpicked.xml" value="0.18" />
-        <entry key="..\:/nariclone/app/src/main/res/layout/activity_guardian_dashboard.xml" value="0.20416666666666666" />
-        <entry key="..\:/nariclone/app/src/main/res/layout/activity_guardian_signup.xml" value="0.20416666666666666" />
-        <entry key="..\:/nariclone/app/src/main/res/layout/activity_nari_dashboard.xml" value="0.33" />
-        <entry key="..\:/nariclone/app/src/main/res/layout/activity_pdfview.xml" value="0.20416666666666666" />
-        <entry key="..\:/nariclone/app/src/main/res/layout/activity_ring.xml" value="0.20416666666666666" />
-        <entry key="..\:/nariclone/app/src/main/res/layout/activity_sign_up_nari.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/om/AndroidStudioProjects/NARI/app/src/main/res/layout/activity_guardian_login.xml" value="0.20677083333333332" />
+        <entry key="..\:/Users/om/AndroidStudioProjects/NARI/app/src/main/res/layout/activity_guardian_signup.xml" value="0.20677083333333332" />
+        <entry key="..\:/Users/om/AndroidStudioProjects/NARI/app/src/main/res/layout/activity_main.xml" value="0.20677083333333332" />
+        <entry key="..\:/Users/om/AndroidStudioProjects/NARI/app/src/main/res/layout/activity_main_page.xml" value="0.22" />
+        <entry key="..\:/Users/om/AndroidStudioProjects/NARI/app/src/main/res/layout/activity_maps.xml" value="0.20677083333333332" />
+        <entry key="..\:/Users/om/AndroidStudioProjects/NARI/app/src/main/res/layout/activity_nari_dashboard.xml" value="0.22" />
+        <entry key="..\:/Users/om/AndroidStudioProjects/NARI/app/src/main/res/layout/activity_nari_login.xml" value="0.20677083333333332" />
+        <entry key="..\:/Users/om/AndroidStudioProjects/NARI/app/src/main/res/layout/activity_nari_profile.xml" value="0.20677083333333332" />
+        <entry key="..\:/Users/om/AndroidStudioProjects/NARI/app/src/main/res/layout/activity_ring.xml" value="0.20677083333333332" />
+        <entry key="..\:/Users/om/AndroidStudioProjects/NARI/app/src/main/res/layout/activity_sign_up_nari.xml" value="0.20677083333333332" />
+        <entry key="..\:/him/app/src/main/res/drawable/card1.xml" value="0.1685" />
+        <entry key="..\:/him/app/src/main/res/drawable/ic.xml" value="0.1685" />
+        <entry key="..\:/him/app/src/main/res/drawable/ic_baseline_add_circle_24.xml" value="0.161" />
+        <entry key="..\:/him/app/src/main/res/drawable/mainbg.xml" value="0.1825" />
+        <entry key="..\:/him/app/src/main/res/layout/activity_add_nari.xml" value="0.25677083333333334" />
+        <entry key="..\:/him/app/src/main/res/layout/activity_callpicked.xml" value="0.25677083333333334" />
+        <entry key="..\:/him/app/src/main/res/layout/activity_guardian_dashboard.xml" value="0.25677083333333334" />
+        <entry key="..\:/him/app/src/main/res/layout/activity_guardian_login.xml" value="0.264" />
+        <entry key="..\:/him/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/him/app/src/main/res/layout/activity_main_page.xml" value="0.25677083333333334" />
+        <entry key="..\:/him/app/src/main/res/layout/activity_maps.xml" value="0.25677083333333334" />
+        <entry key="..\:/him/app/src/main/res/layout/activity_nari_dashboard.xml" value="0.25677083333333334" />
+        <entry key="..\:/him/app/src/main/res/layout/activity_nari_login.xml" value="0.25677083333333334" />
+        <entry key="..\:/him/app/src/main/res/layout/activity_notificationbar.xml" value="0.2557291666666667" />
+        <entry key="..\:/him/app/src/main/res/layout/activity_pdfview.xml" value="0.25677083333333334" />
+        <entry key="..\:/him/app/src/main/res/layout/activity_sensorshake.xml" value="0.25677083333333334" />
+        <entry key="..\:/him/app/src/main/res/layout/activity_sign_up_nari.xml" value="0.25677083333333334" />
+        <entry key="..\:/him/app/src/main/res/layout/activity_splash_screen.xml" value="0.25677083333333334" />
+        <entry key="..\:/him/app/src/main/res/layout/activity_splashscreen2.xml" value="0.25677083333333334" />
+        <entry key="..\:/him/app/src/main/res/layout/card_design.xml" value="0.25677083333333334" />
+        <entry key="..\:/him/app/src/main/res/layout/custom_user_show.xml" value="0.25677083333333334" />
+        <entry key="..\:/him/app/src/main/res/layout/featuredlist.xml" value="0.25677083333333334" />
+        <entry key="..\:/him/app/src/main/res/layout/fragment_nariaguardian.xml" value="0.2557291666666667" />
+        <entry key="..\:/him/app/src/main/res/layout/fragment_nariancomm.xml" value="0.2557291666666667" />
+        <entry key="..\:/him/app/src/main/res/layout/fragment_naribot.xml" value="0.20982905982905983" />
+        <entry key="..\:/him/app/src/main/res/layout/fragment_naricookhelper.xml" value="0.2557291666666667" />
+        <entry key="..\:/him/app/src/main/res/layout/fragment_narighelpline.xml" value="0.2557291666666667" />
+        <entry key="..\:/him/app/src/main/res/layout/fragment_narigscheme.xml" value="0.2557291666666667" />
+        <entry key="..\:/him/app/src/main/res/layout/fragment_narihemergency.xml" value="0.20982905982905983" />
+        <entry key="..\:/him/app/src/main/res/layout/fragment_narihome.xml" value="0.25677083333333334" />
+        <entry key="..\:/him/app/src/main/res/layout/fragment_nariprofile.xml" value="0.2557291666666667" />
+        <entry key="..\:/him/app/src/main/res/layout/fragment_nariptcalendar.xml" value="0.2557291666666667" />
+        <entry key="..\:/him/app/src/main/res/layout/fragment_nariqrcode.xml" value="0.2557291666666667" />
+        <entry key="..\:/him/app/src/main/res/layout/fragment_narisos.xml" value="0.2557291666666667" />
       </map>
     </option>
   </component>

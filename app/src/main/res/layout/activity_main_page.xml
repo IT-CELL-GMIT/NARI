@@ -26,6 +26,7 @@
                 app:lottie_rawRes="@raw/girl">
 
             </com.airbnb.lottie.LottieAnimationView>
+
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="300dp"
