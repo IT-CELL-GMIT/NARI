@@ -46,7 +46,7 @@ public class nari_login extends AppCompatActivity {
         binding.narilogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(nari_login.this,MainActivity.class));
+                startActivity(new Intent(nari_login.this,splashscreen2.class));
 
                 progressDialog.setMessage("Please wait...");
                 progressDialog.show();
@@ -57,7 +57,7 @@ public class nari_login extends AppCompatActivity {
         binding.narisignup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(nari_login.this,splashscreen2.class));
+                startActivity(new Intent(nari_login.this,MainActivity.class));
             }
         });
     }
