@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SplashScreen"
+    android:background="@drawable/p"
+    android:scaleType="centerCrop"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        android:orientation="vertical"
+        android:layout_gravity="center">
+
+        <TextView
+            android:id="@+id/ssnari"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/bungee"
+            android:text="Nari"
+            android:textAlignment="center"
+            android:includeFontPadding="false"
+            android:textColor="#fece2f"
+            android:layout_marginTop="10dp"
+            android:textSize="60sp" />
+
+        <TextView
+            android:id="@+id/sstext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="500dp"
+            android:fontFamily="@font/bungee"
+            android:includeFontPadding="false"
+            android:text="You Are Not Alone, we are with you"
+            android:textAlignment="center"
+            android:textColor="#fece2f"
+            android:textSize="30sp" />
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

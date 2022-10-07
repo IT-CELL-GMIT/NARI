@@ -7,7 +7,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FDE79C"
+    android:background="#FFBE9B"
     tools:context=".nari_login">
 
     <LinearLayout
@@ -21,17 +21,25 @@
             android:orientation="vertical"
             android:padding="10dp">
 
-
-            <TextView
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/lottie"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/bungee"
-                android:includeFontPadding="false"
-                android:text="NARI"
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="35dp"
-                android:transitionName="logo_text"></TextView>
+                android:layout_height="300dp"
+                android:transitionName="logo_image"
+                android:layout_marginTop="30dp"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/girllaptop">
+
+            </com.airbnb.lottie.LottieAnimationView>
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="-400dp"
+                android:src="@drawable/head"/>
 
 
         </LinearLayout>
@@ -40,19 +48,17 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="100dp"
+            android:layout_marginTop="-80dp"
             android:orientation="vertical">
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_margin="10dp"
-                android:layout_marginTop="100dp"
-                app:cardBackgroundColor="@color/white"
+                app:cardBackgroundColor="#FFE1D0"
                 app:cardCornerRadius="20dp"
-                app:cardElevation="10dp"
-                app:cardMaxElevation="10dp"
+                app:cardElevation="20dp"
+                app:cardMaxElevation="20dp"
                 app:cardPreventCornerOverlap="true"
                 app:cardUseCompatPadding="true">
 
@@ -127,7 +133,9 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
                         android:layout_marginBottom="5dp"
-                        android:background="#000"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginRight="25dp"
+                        android:background="@drawable/card1"
                         android:fontFamily="@font/bungee"
                         android:text="Log In"
                         android:transitionName="btn_log"></Button>

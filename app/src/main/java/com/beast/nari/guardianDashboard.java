@@ -51,11 +51,9 @@ public class guardianDashboard extends AppCompatActivity {
             public void onClick(View view) {
 //                startActivity(new Intent(getApplicationContext(), AddNariActivity.class));
 
-                if (binding.addNariText.getText().toString() != "Add Nari"){
-                    Toast.makeText(guardianDashboard.this, "you have already added the friend , you can't add more", Toast.LENGTH_SHORT).show();
-                }else {
+
                     startActivity(new Intent(getApplicationContext(), AddNariActivity.class));
-                }
+
 
             }
 

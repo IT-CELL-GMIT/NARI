@@ -35,7 +35,7 @@ public class MainPage extends AppCompatActivity {
 
             if (job.equalsIgnoreCase("NARI")) {
 
-                startActivity(new Intent(getApplicationContext(), NariDashboard.class));
+                startActivity(new Intent(getApplicationContext(), MainActivity.class));
                 finish();
             }
             if (job.equalsIgnoreCase("GUARDIAN")) {

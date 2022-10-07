@@ -49,10 +49,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
-        
-       checkLocation();
 
-       progressDialog.setMessage("Please Wait...");
+        checkLocation();
+
+        progressDialog.setMessage("Please Wait...");
 //       progressDialog.show();
 
     }
