@@ -16,7 +16,7 @@ import android.widget.ImageView;
 import com.beast.nari.databinding.ActivityNariDashboardBinding;
 
 public class NariDashboard extends AppCompatActivity {
-    ImageView msk,helpline,pdfself;
+    ImageView msk,helpline,pdfself,communitysupport;
     ImageView fakecall;
 
     private ActivityNariDashboardBinding binding;
@@ -29,6 +29,7 @@ public class NariDashboard extends AppCompatActivity {
         fakecall = findViewById(R.id.fakecall);
         helpline = findViewById(R.id.helpLine);
         pdfself = findViewById(R.id.self);
+        communitysupport= findViewById(R.id.b);
         SensorManager sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
         Sensor sensorShake = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
         SensorEventListener sensorEventListener = new SensorEventListener() {
@@ -106,5 +107,12 @@ public class NariDashboard extends AppCompatActivity {
                 startActivity(new Intent(NariDashboard.this,pdfview.class));
             }
         });
+        communitysupport.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(NariDashboard.this,CommunitySupport.class));
+            }
+        });
+
     }
 }

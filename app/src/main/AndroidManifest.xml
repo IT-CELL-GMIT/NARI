@@ -18,6 +18,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NARI"
         tools:targetApi="31">
+        <activity android:name=".CommunitySupport"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name=".ChatWithBoat"
+            android:exported="false"
+            android:label="Chatting with boat"
+            android:parentActivityName=".NariDashboard" />
         <activity
             android:name=".splashscreen2"
             android:exported="false" />

@@ -449,6 +449,7 @@
                         app:cardUseCompatPadding="true">
 
                         <RelativeLayout
+                            android:id="@+id/communitySupport"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:padding="10dp">
@@ -459,7 +460,7 @@
                                 android:layout_width="80dp"
                                 android:layout_height="80dp"
                                 android:layout_centerHorizontal="true"
-                                android:src="@drawable/womenpower">
+                                android:src="@drawable/community_post">
 
                             </de.hdodenhof.circleimageview.CircleImageView>
 
@@ -471,7 +472,7 @@
                                 android:layout_marginTop="5dp"
                                 android:fontFamily="sans-serif-condensed-medium"
                                 android:includeFontPadding="false"
-                                android:text="Self Protection"
+                                android:text="Community Support"
                                 android:textAlignment="center"
                                 android:textColor="@color/black"
                                 android:textSize="16sp" />

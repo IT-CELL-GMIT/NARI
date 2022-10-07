@@ -10,6 +10,8 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.location.Address;
+import android.location.Geocoder;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
@@ -19,6 +21,14 @@ import android.provider.Settings;
 import android.widget.Toast;
 
 import com.beast.nari.databinding.ActivityMapsBinding;
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.api.Api;
+import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.common.api.PendingResult;
+import com.google.android.gms.common.api.Status;
+import com.google.android.gms.common.api.internal.zaag;
+import com.google.android.gms.location.FusedLocationProviderClient;
+import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -26,6 +36,15 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.gms.maps.model.TileOverlay;
+import com.google.android.gms.tasks.OnSuccessListener;
+
+import java.io.FileDescriptor;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.List;
+import java.util.Locale;
+import java.util.concurrent.TimeUnit;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback, LocationListener {
 
@@ -36,6 +55,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     int PERMISSION_ID = 44;
     private LocationManager locationManager;
     ProgressDialog progressDialog;
+    private GoogleApiClient client;
+    FusedLocationProviderClient fusedLocationProviderClient;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,8 +87,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
             if (isLocationEnabled()){
 
-                locationManager =(LocationManager) getSystemService(Context.LOCATION_SERVICE);
-                locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, this);
+                getLocationData();
 //                progressDialog.show();
 
             }else {
@@ -100,7 +120,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         mMap.addMarker(options).showInfoWindow();
         mMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
-        mMap.moveCamera(CameraUpdateFactory.zoomTo(18));
+        mMap.moveCamera(CameraUpdateFactory.zoomTo(20));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
 
     }
@@ -175,5 +195,142 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         Intent intent = new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS);
         startActivity(intent);
     }
+
+
+
+
+
+
+    @SuppressLint("MissingPermission")
+    private void getLocationData(){
+        
+        client = new GoogleApiClient() {
+            @NonNull
+            @Override
+            public ConnectionResult blockingConnect() {
+                return null;
+            }
+
+            @NonNull
+            @Override
+            public ConnectionResult blockingConnect(long l, @NonNull TimeUnit timeUnit) {
+                return null;
+            }
+
+            @NonNull
+            @Override
+            public ConnectionResult getConnectionResult(@NonNull Api<?> api) {
+                return null;
+            }
+
+            @NonNull
+            @Override
+            public PendingResult<Status> clearDefaultAccountAndReconnect() {
+                return null;
+            }
+
+            @Override
+            public void connect() {
+
+            }
+
+            @Override
+            public void disconnect() {
+
+            }
+
+            @Override
+            public void dump(@NonNull String s, @NonNull FileDescriptor fileDescriptor, @NonNull PrintWriter printWriter, @NonNull String[] strings) {
+
+            }
+
+            @Override
+            public void reconnect() {
+
+            }
+
+            @Override
+            public void registerConnectionCallbacks(@NonNull ConnectionCallbacks connectionCallbacks) {
+
+            }
+
+            @Override
+            public void registerConnectionFailedListener(@NonNull OnConnectionFailedListener onConnectionFailedListener) {
+
+            }
+
+            @Override
+            public void stopAutoManage(@NonNull FragmentActivity fragmentActivity) {
+
+            }
+
+            @Override
+            public void unregisterConnectionCallbacks(@NonNull ConnectionCallbacks connectionCallbacks) {
+
+            }
+
+            @Override
+            public void unregisterConnectionFailedListener(@NonNull OnConnectionFailedListener onConnectionFailedListener) {
+
+            }
+
+            @Override
+            public boolean hasConnectedApi(@NonNull Api<?> api) {
+                return false;
+            }
+
+            @Override
+            public boolean isConnected() {
+                return false;
+            }
+
+            @Override
+            public boolean isConnecting() {
+                return false;
+            }
+
+            @Override
+            public boolean isConnectionCallbacksRegistered(@NonNull ConnectionCallbacks connectionCallbacks) {
+                return false;
+            }
+
+            @Override
+            public boolean isConnectionFailedListenerRegistered(@NonNull OnConnectionFailedListener onConnectionFailedListener) {
+                return false;
+            }
+        };
+        client.connect();
+        fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
+
+
+                fusedLocationProviderClient.getLastLocation().addOnSuccessListener(new OnSuccessListener<Location>() {
+                    @Override
+                    public void onSuccess(Location location) {
+
+                        if (location != null){
+
+                            Geocoder geocoder = new Geocoder(getApplicationContext(), Locale.getDefault());
+                            try {
+                                List<Address> addresses = geocoder.getFromLocation(location.getLatitude(), location.getLongitude(), 1);
+
+                                Toast.makeText(MapsActivity.this, "location retrived successfully", Toast.LENGTH_SHORT).show();
+
+                                LATITUDE = addresses.get(0).getLatitude();
+                                LONGITUDE = addresses.get(0).getLongitude();
+
+                                setMarkerTOMap();
+
+
+                            } catch (IOException e) {
+                                Toast.makeText(MapsActivity.this, "location exception" + e.getMessage(), Toast.LENGTH_SHORT).show();
+                            }
+                        }else{
+                            Toast.makeText(MapsActivity.this, "something went wrong", Toast.LENGTH_SHORT).show();
+                        }
+
+                    }
+                });
+            }
+
 
 }

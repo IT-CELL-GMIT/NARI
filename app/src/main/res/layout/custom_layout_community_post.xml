@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/black"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="53dp"
+            android:layout_height="53dp"
+            android:gravity="center"
+            android:layout_gravity="center_vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/communityProfilePic"
+                android:src="@drawable/beauty">
+
+            </de.hdodenhof.circleimageview.CircleImageView>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:id="@+id/profileLine"
+               android:background="@drawable/circle_background">
+
+           </de.hdodenhof.circleimageview.CircleImageView>
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginLeft="7dp"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/userID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textColor="@color/Yellow"
+                android:textStyle="bold"
+                android:text="USERID">
+
+            </TextView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FDE79C"
+                    android:textStyle="bold"
+                    android:text="original x ">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/originalUserId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FDE79C"
+                    android:textStyle="bold"
+                    android:text="USERID">
+
+                </TextView>
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/moreOptions"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_baseline_more_vert_24">
+
+        </ImageView>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/communityPostIMG"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/girl">
+
+    </ImageView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/likePost"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/ic_baseline_thumb_up_24">
+        </ImageView>
+
+        <ImageView
+            android:id="@+id/disLikePost"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/ic_baseline_thumb_down_alt_24">
+        </ImageView>
+
+        <ImageView
+            android:id="@+id/replyPost"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/ic_baseline_chat_24">
+        </ImageView>
+
+        <ImageView
+            android:id="@+id/communityReposts"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/ic_baseline_refresh_24">
+        </ImageView>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/communityLikes"
+            android:layout_width="30dp"
+            android:gravity="center_horizontal"
+            android:layout_height="20dp"
+            android:textColor="@color/Yellow"
+            android:layout_marginLeft="10dp">
+
+        </TextView>
+
+       <TextView
+           android:id="@+id/communityDisLikes"
+            android:layout_width="30dp"
+            android:layout_height="20dp"
+           android:gravity="center_horizontal"
+           android:textColor="@color/Yellow"
+            android:layout_marginLeft="10dp">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/communityReplies"
+            android:layout_width="30dp"
+            android:layout_height="20dp"
+            android:textColor="@color/Yellow"
+            android:gravity="center_horizontal"
+            android:layout_marginLeft="10dp">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/noOfReposts"
+            android:layout_width="30dp"
+            android:layout_height="20dp"
+            android:gravity="center_horizontal"
+            android:textColor="@color/Yellow"
+            android:layout_marginLeft="10dp">
+
+        </TextView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/communityCaption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="caption..."
+            android:textColor="@color/Yellow"
+            android:layout_marginLeft="5dp"
+            android:textSize="15dp">
+
+        </TextView>
+
+        <ImageView
+            android:id="@+id/moreCaptionText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_more_horiz_24"
+            android:layout_gravity="center_vertical">
+
+        </ImageView>
+
+    </LinearLayout>
+
+</LinearLayout>
