@@ -112,7 +112,7 @@ public class HomeFragment extends Fragment {
         featuredLocation.add(new featuredHelperClass(R.drawable.protection,"Self Defence","Here You can learn Self Defence"));
         featuredLocation.add(new featuredHelperClass(R.drawable.womenpower,"Government Scheme","All Government Scheme will be visible here"));
         featuredLocation.add(new featuredHelperClass(R.drawable.helpline1,"Government Helpline","All Government Helpline will be visible here"));
-        featuredLocation.add(new featuredHelperClass(R.drawable.emergency,"Emergency Contact","You can call to you close one"));
+        featuredLocation.add(new featuredHelperClass(R.drawable.emergency,"Emergency Contact","You can call to your close one"));
         featuredLocation.add(new featuredHelperClass(R.drawable.voice,"voice Recognition","Voice Recognition by which you can send message"));
 
 
